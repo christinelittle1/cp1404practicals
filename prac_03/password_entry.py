@@ -9,12 +9,7 @@ MIN_LENGTH = 6
 def main():
     """Get password and print asterisks."""
     password = get_password()
-    print_asterisks(password)
-
-
-def print_asterisks(password):
-    """"Print number of asterisks equal to password length."""
-    print("*" * len(password))
+    print(print_asterisks(password))
 
 
 def get_password():
@@ -24,6 +19,10 @@ def get_password():
         print("Invalid password!")
         password = input("Enter password that contains {} or more characters: ".format(MIN_LENGTH))
     return password
+
+
+def print_asterisks(password):
+    return "*" * len(password)
 
 
 main()
