@@ -9,7 +9,7 @@ MIN_LENGTH = 6
 def main():
     """Get password and print asterisks."""
     password = get_password()
-    print(print_asterisks(password))
+    print_asterisks(password)
 
 
 def get_password():
@@ -22,7 +22,7 @@ def get_password():
 
 
 def print_asterisks(password):
-    return "*" * len(password)
+    print("*" * len(password))
 
 
 main()
