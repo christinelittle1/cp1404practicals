@@ -10,9 +10,7 @@ def main():
 
 
 def determine_result(score):
-    if score < 0:
-        return "Invalid score"
-    elif score > 100:
+    if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
         return "Excellent"
