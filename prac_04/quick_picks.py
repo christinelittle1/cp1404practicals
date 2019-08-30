@@ -16,6 +16,9 @@ lines_of_output = int(input("How many quick picks? "))
 for line in range(lines_of_output):
     quick_picks = []
     for i in range(NUMBERS_PER_LINE):
-        quick_picks.append(random.randint(MIN_NUMBER, MAX_NUMBER))
-        quick_picks.sort()
-    print(' '.join(map(str, quick_picks)).format(quick_picks))
+        quick_pick = random.randint(MIN_NUMBER, MAX_NUMBER)
+        while quick_pick in quick_picks:
+            quick_pick = random.randint(MIN_NUMBER, MAX_NUMBER)
+        quick_picks.append(quick_pick)
+    quick_picks.sort()
+    print(" ".join("{:2}".format(quick_pick) for quick_pick in quick_picks))
