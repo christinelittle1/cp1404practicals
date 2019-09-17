@@ -1,8 +1,8 @@
 class ProgrammingLanguage:
 
-    def __init__(self, name="", is_dynamic=False, is_reflection=False, year=0):
+    def __init__(self, name="", dynamic="", is_reflection=False, year=0):
         self.name = name
-        self.is_dynamic = is_dynamic
+        self.dynamic = dynamic
         self.is_reflection = is_reflection
         self.year = year
 
@@ -11,3 +11,7 @@ class ProgrammingLanguage:
             return True
         else:
             return False
+
+    def __str__(self):
+        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.dynamic, self.is_reflection,
+                                                                          self.year)
