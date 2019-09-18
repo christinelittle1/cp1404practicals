@@ -7,11 +7,11 @@ class ProgrammingLanguage:
         self.year = year
 
     def is_dynamic(self):
-        if self.is_dynamic == "Dynamic":
+        if self.dynamic == "Dynamic":
             return True
         else:
             return False
 
     def __str__(self):
         return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.dynamic, self.is_reflection,
-                                                                          self.year)
+                                                                           self.year)
