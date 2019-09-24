@@ -6,11 +6,11 @@ def main():
     another_guitar = Guitar("Another Guitar", 2012, 0)
     print(gibson)
 
-    print(gibson.get_age())
-    print(another_guitar.get_age())
+    print("{} get_age() - Expected 96. Got {}".format(gibson.name, gibson.get_age()))
+    print("{} get_age() - Expected 6. Got {}".format(another_guitar.name, another_guitar.get_age()))
 
-    print(gibson.is_vintage())
-    print(another_guitar.is_vintage())
+    print("{} is_vintage() - Expected True. Got {}".format(gibson.name, gibson.is_vintage()))
+    print("{} is_vintage() - Expected False. Got {}".format(another_guitar.name, another_guitar.is_vintage()))
 
 
 main()
