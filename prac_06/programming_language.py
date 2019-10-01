@@ -9,6 +9,7 @@ class ProgrammingLanguage:
     def is_dynamic(self):
         if self.dynamic == "Dynamic":
             return True
+        return False
 
     def __str__(self):
         return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.dynamic, self.is_reflection,
