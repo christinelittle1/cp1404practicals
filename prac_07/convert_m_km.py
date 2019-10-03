@@ -1,10 +1,12 @@
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.properties import StringProperty
 
 MILES_TO_KM = 1.609
 
 
 class ConvertMilesToKilometresApp(App):
+    output_number = StringProperty()
 
     def build(self):
         self.title = "Convert Miles to Kilometres"
