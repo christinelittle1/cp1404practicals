@@ -4,16 +4,19 @@ BoxLayout:
         orientation: 'horizontal'
         TextInput:
             id: input_number
+            on_text: app.handle_invalid_input(self.text)
         BoxLayout:
             orientation: 'vertical'
+            size_hint_x: 0.25
             Button:
                 text: 'Up'
-                on_press: app.handle_increment(1, int(input_number.text))
+                on_press: app.handle_increment(1, input_number.text)
             Button:
                 text: 'Down'
-                on_press: app.handle_increment(-1, int(input_number.text))
+                on_press: app.handle_increment(-1, input_number.text)
     Button:
         text: 'Convert miles to km'
-        on_press: app.convert_miles_to_km(int(input_number.text))
+        on_press: app.convert_miles_to_km(input_number.text)
     Label:
         id: output_number
+        color: (1, 1, 0, 1)
