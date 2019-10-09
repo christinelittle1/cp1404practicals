@@ -1,23 +1,25 @@
 from kivy.app import App
-from kivy.core.text import Label
 from kivy.lang import Builder
 from kivy.properties import StringProperty
-
-NAMES = ["Christine", "Bob", "Harry"]
+from kivy.uix.label import Label
 
 
 class NameApp(App):
     name_label = StringProperty
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.names = ["Christine", "Bob", "Harry"]
+
     def build(self):
         self.title = "List of Names"
         self.root = Builder.load_file('name.kv')
+        self.create_labels()
         return self.root
 
     def create_labels(self):
-        for name in NAMES:
+        for name in self.names:
             name_label = Label(text=name)
-            name_label.bind()
             self.root.ids.names_box.add_widget(name_label)
 
 
