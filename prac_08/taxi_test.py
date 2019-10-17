@@ -3,7 +3,7 @@ from prac_08.taxi import Taxi
 
 def main():
     # 1.
-    new_taxi = Taxi("Prius 1", 100, 1.23)
+    new_taxi = Taxi("Prius 1", 100)
     # 2.
     new_taxi.drive(40)
     # 3.
