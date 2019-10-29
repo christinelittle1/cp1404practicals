@@ -18,8 +18,8 @@ def main():
                 os.mkdir(category)
             except FileExistsError:
                 pass
+        shutil.move(filename, '{}/{}'.format(extension_to_category[extension], filename))
     print(extension_to_category)
-
 
 
 main()
