@@ -13,9 +13,8 @@ def main():
             os.mkdir(extension)
         except FileExistsError:
             pass
-        if filename.endswith('.{}'.format(extension)):
-            print('{}/{}'.format(extension, filename))
-            shutil.move(filename, '{}/{}'.format(extension, filename))
+        print('{}/{}'.format(extension, filename))
+        shutil.move(filename, '{}/{}'.format(extension, filename))
 
 
 main()

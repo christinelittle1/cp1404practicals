@@ -35,7 +35,10 @@ def format_phrase(phrase):
     >>> format_phrase("what's up.")
     "What's up."
     """
-    pass
+    sentence = phrase[0].upper() + phrase[1:]
+    if phrase[-1] != ".":
+        return sentence + "."
+    return sentence
 
 
 def run_tests():
